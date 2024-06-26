@@ -1,26 +1,35 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <GamePage />
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script setup>
+import GamePage from "./components/GamePage.vue";
+// import { onMounted } from "vue";
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+// onMounted(async () => {
+//   const response = await fetch("http://localhost:3000/users/", {});
+//   console.log(response);
+// });
 </script>
 
-<style>
+<style lang="scss">
+@font-face {
+  font-family: "uni0553";
+  src: url("./fonts/uni0553-webfont.woff") format("woff");
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  font-family: "uni0553", sans-serif;
+  background: #242021;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  text-align: right;
+  font-weight: 400;
+  color: white;
 }
 </style>
